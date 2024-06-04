@@ -13,27 +13,27 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Spark StandAlone HA 环境搭建步骤 前提: 确保Zookeeper 和 HDFS 均已经启动  先在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1 原因: 配置文件中固定master是谁, 那么就无法用到zk的动态切换master功能了. 在spark-env.sh中, 增加: 1234SPARK_DAEMON_JAVA_OPTS&#x3D;&amp;quot">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\14.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\15.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\16.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\17.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\18.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\19.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\20.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\21.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\22.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\23.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\24.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\25.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\26.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\27.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\28.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/14.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/15.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/16.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/17.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/18.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/19.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/20.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/21.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/22.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/23.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/24.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/25.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/26.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/27.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark3/28.jpg">
 <meta property="article:published_time" content="2024-06-03T05:37:58.000Z">
-<meta property="article:modified_time" content="2024-06-04T01:00:25.072Z">
+<meta property="article:modified_time" content="2024-06-04T01:46:39.606Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Spark(HA)，Spark(Yarn)">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark3\14.jpg">
+<meta name="twitter:image" content="http://example.com/2024/06/03/Spark3/14.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -130,13 +130,13 @@
 <p>启动集群:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在node1上 启动一个master 和全部worker</span></span><br><span class="line">sbin/start-all.sh</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意, 下面命令在node2上执行</span></span><br><span class="line">sbin/start-master.sh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在node2上启动一个备用的master进程</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\花少女\blog\source_posts\Spark3\14.jpg"><br><img src="C:\Users\花少女\blog\source_posts\Spark3\15.jpg"></p>
+<p><img src="/2024/06/03/Spark3/14.jpg"><br><img src="/2024/06/03/Spark3/15.jpg"></p>
 <h2 id="master主备切换"><a href="#master主备切换" class="headerlink" title="master主备切换"></a>master主备切换</h2><p>提交一个spark任务到当前<code>alive</code>master上:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/spark-submit --master spark://node1:7077 /export/server/spark/examples/src/main/python/pi.py 1000</span><br></pre></td></tr></table></figure>
 
 
 <p>在提交成功后, 将alivemaster直接kill掉</p>
-<p>不会影响程序运行:<br><img src="C:\Users\花少女\blog\source_posts\Spark3\16.jpg"><br>当新的master接收集群后, 程序继续运行, 正常得到结果.</p>
+<p>不会影响程序运行:<br><img src="/2024/06/03/Spark3/16.jpg"><br>当新的master接收集群后, 程序继续运行, 正常得到结果.</p>
 <blockquote>
 <p>结论 HA模式下, 主备切换 不会影响到正在运行的程序.</p>
 <p>最大的影响是 会让它中断大约30秒左右.</p>
@@ -166,8 +166,8 @@
 <h1 id="附1-Anaconda-On-Linux-安装-单台服务器"><a href="#附1-Anaconda-On-Linux-安装-单台服务器" class="headerlink" title="附1 Anaconda On Linux 安装 (单台服务器)"></a>附1 Anaconda On Linux 安装 (单台服务器)</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>上传安装包:</p>
 <p>上传: 资料中提供的<code>Anaconda3-2021.05-Linux-x86_64.sh</code>文件到Linux服务器上</p>
 <p>安装:</p>
-<p><code>sh ./Anaconda3-2021.05-Linux-x86_64.sh</code><br><img src="C:\Users\花少女\blog\source_posts\Spark3\17.jpg"><br><img src="C:\Users\花少女\blog\source_posts\Spark3\18.jpg"><br><img src="C:\Users\花少女\blog\source_posts\Spark3\19.jpg"><br><img src="C:\Users\花少女\blog\source_posts\Spark3\20.jpg"><br><img src="C:\Users\花少女\blog\source_posts\Spark3\21.jpg"><br>输入yes后就安装完成了.</p>
-<p>安装完成后, <code>退出finalshell 重新进来</code>:<br><img src="C:\Users\花少女\blog\source_posts\Spark3\22.jpg"></p>
+<p><code>sh ./Anaconda3-2021.05-Linux-x86_64.sh</code><br><img src="/2024/06/03/Spark3/17.jpg"><br><img src="/2024/06/03/Spark3/18.jpg"><br><img src="/2024/06/03/Spark3/19.jpg"><br><img src="/2024/06/03/Spark3/20.jpg"><br><img src="/2024/06/03/Spark3/21.jpg"><br>输入yes后就安装完成了.</p>
+<p>安装完成后, <code>退出finalshell 重新进来</code>:<br><img src="/2024/06/03/Spark3/22.jpg"></p>
 <p>看到这个Base开头表明安装好了.</p>
 <p>base是默认的虚拟环境.<br>​</p>
 <h2 id="国内源"><a href="#国内源" class="headerlink" title="国内源"></a>国内源</h2><p>如果你安装好后, 没有出现base, 可以打开:&#x2F;root&#x2F;.condarc这个文件, 追加如下内容:</p>
@@ -190,9 +190,9 @@
 
 
 <h1 id="附3-Windows系统配置Anaconda"><a href="#附3-Windows系统配置Anaconda" class="headerlink" title="附3 Windows系统配置Anaconda"></a>附3 Windows系统配置Anaconda</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>打开资料中提供的:Anaconda3-2021.05-Windows-x86_64.exe文件,或者去官网下载:[<a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual#Downloads]">https://www.anaconda.com/products/individual#Downloads]</a><br>​</p>
-<p>打开后,一直点击<code>Next</code>下一步即可:<br><img src="C:\Users\花少女\blog\source_posts\Spark3\23.jpg" alt="image.png"><br><img src="C:\Users\花少女\blog\source_posts\Spark3\24.jpg" alt="image.png"><br>如果想要修改安装路径, 可以修改<br><img src="C:\Users\花少女\blog\source_posts\Spark3\25.jpg" alt="image.png"><br>不必勾选<br><img src="C:\Users\花少女\blog\source_posts\Spark3\26.jpg" alt="image.png"><br>最终点击Finish完成安装</p>
-<p>打开开始菜单, 搜索Anaconda<br><img src="C:\Users\花少女\blog\source_posts\Spark3\27.jpg" alt="image.png"><br>出现如图的程序, 安装成功.</p>
-<p>打开 <code>Anaconda Prompt</code>程序:<br><img src="C:\Users\花少女\blog\source_posts\Spark3\28.jpg" alt="image.png"><br>出现<code>base</code>说明安装正确.</p>
+<p>打开后,一直点击<code>Next</code>下一步即可:<br><img src="/2024/06/03/Spark3/23.jpg" alt="image.png"><br><img src="/2024/06/03/Spark3/24.jpg" alt="image.png"><br>如果想要修改安装路径, 可以修改<br><img src="/2024/06/03/Spark3/25.jpg" alt="image.png"><br>不必勾选<br><img src="/2024/06/03/Spark3/26.jpg" alt="image.png"><br>最终点击Finish完成安装</p>
+<p>打开开始菜单, 搜索Anaconda<br><img src="/2024/06/03/Spark3/27.jpg" alt="image.png"><br>出现如图的程序, 安装成功.</p>
+<p>打开 <code>Anaconda Prompt</code>程序:<br><img src="/2024/06/03/Spark3/28.jpg" alt="image.png"><br>出现<code>base</code>说明安装正确.</p>
 <h2 id="配置国内源"><a href="#配置国内源" class="headerlink" title="配置国内源"></a>配置国内源</h2><p>Anaconda默认源服务器在国外, 网速比较慢, 配置国内源加速网络下载.<br>​</p>
 <p>打开上图中的 <code>Anaconda Prompt</code>程序:<br>执行:<br><code>conda config --set show_channel_urls yes</code><br>​</p>
 <p>然后用记事本打开:<br><code>C:\Users\用户名\.condarc</code>文件, 将如下内容替换进文件内,保存即可:</p>

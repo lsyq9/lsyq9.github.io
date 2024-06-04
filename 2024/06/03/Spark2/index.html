@@ -13,25 +13,25 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Spark Local环境部署下载地址https:&#x2F;&#x2F;dlcdn.apache.org&#x2F;spark&#x2F;spark-3.2.0&#x2F;spark-3.2.0-bin-hadoop3.2.tgz 条件 PYTHON 推荐3.8 JDK 1.8  Anaconda On Linux 安装本次课程的Python环境需要安装到Linux(虚拟机)和Windows(本机)上 参见最下方, 附1: Anaconda O">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\1.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\2.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\3.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\4.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\5.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\6.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\7.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\8.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\9.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\10.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\11.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\12.jpg">
-<meta property="og:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\13.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/1.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/2.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/3.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/4.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/5.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/6.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/7.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/8.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/9.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/10.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/11.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/12.jpg">
+<meta property="og:image" content="http://example.com/2024/06/03/Spark2/13.jpg">
 <meta property="article:published_time" content="2024-06-03T05:31:31.000Z">
-<meta property="article:modified_time" content="2024-06-04T00:59:37.016Z">
+<meta property="article:modified_time" content="2024-06-04T01:46:04.236Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Spark(local)，Spark(stand-alone)">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:\Users\%E8%8A%B1%E5%B0%91%E5%A5%B3\blog\source_posts\Spark2\1.jpg">
+<meta name="twitter:image" content="http://example.com/2024/06/03/Spark2/1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -126,31 +126,31 @@
 <li>HADOOP_HOME: 告知Spark  Hadoop安装在哪里</li>
 </ul>
 <p>这5个环境变量 都需要配置在: <code>/etc/profile</code>中<br>​</p>
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\1.jpg"></p>
+<p><img src="/2024/06/03/Spark2/1.jpg"></p>
 <p>PYSPARK_PYTHON和 JAVA_HOME 需要同样配置在: <code>/root/.bashrc</code>中</p>
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\2.jpg"></p>
+<p><img src="/2024/06/03/Spark2/2.jpg"></p>
 <h2 id="上传Spark安装包"><a href="#上传Spark安装包" class="headerlink" title="上传Spark安装包"></a>上传Spark安装包</h2><p>资料中提供了: <code>spark-3.2.0-bin-hadoop3.2.tgz</code></p>
 <p>上传这个文件到Linux服务器中</p>
 <p>将其解压, 课程中将其解压(安装)到: <code>/export/server</code>内.</p>
 <p><code>tar -zxvf spark-3.2.0-bin-hadoop3.2.tgz -C /export/server/</code></p>
 <p>由于spark目录名称很长, 给其一个软链接:</p>
 <p><code>ln -s /export/server/spark-3.2.0-bin-hadoop3.2 /export/server/spark</code><br>​</p>
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\3.jpg"><br><img src="C:\Users\花少女\blog\source_posts\Spark2\4.jpg"></p>
+<p><img src="/2024/06/03/Spark2/3.jpg"><br><img src="/2024/06/03/Spark2/4.jpg"></p>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="bin-pyspark"><a href="#bin-pyspark" class="headerlink" title="bin&#x2F;pyspark"></a>bin&#x2F;pyspark</h3><p>bin&#x2F;pyspark 程序, 可以提供一个  <code>交互式</code>的 Python解释器环境, 在这里面可以写普通python代码, 以及spark代码<br>​</p>
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\5.jpg"></p>
+<p><img src="/2024/06/03/Spark2/5.jpg"></p>
 <p>如图:</p>
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\6.jpg"></p>
+<p><img src="/2024/06/03/Spark2/6.jpg"></p>
 <p>在这个环境内, 可以运行spark代码</p>
 <p>图中的: <code>parallelize</code> 和 <code>map</code> 都是spark提供的API</p>
 <p><code>sc.parallelize([1,2,3,4,5]).map(lambda x: x + 1).collect()</code><br>​</p>
 <h3 id="WEB-UI-4040"><a href="#WEB-UI-4040" class="headerlink" title="WEB UI (4040)"></a>WEB UI (4040)</h3><p>Spark程序在运行的时候, 会绑定到机器的<code>4040</code>端口上.</p>
-<p>如果4040端口被占用, 会顺延到4041 … 4042…<br><img src="C:\Users\花少女\blog\source_posts\Spark2\7.jpg"></p>
+<p>如果4040端口被占用, 会顺延到4041 … 4042…<br><img src="/2024/06/03/Spark2/7.jpg"></p>
 <p>4040端口是一个WEBUI端口, 可以在浏览器内打开:</p>
-<p>输入:<code>服务器ip:4040</code> 即可打开:<br><img src="C:\Users\花少女\blog\source_posts\Spark2\8.jpg"></p>
+<p>输入:<code>服务器ip:4040</code> 即可打开:<br><img src="/2024/06/03/Spark2/8.jpg"></p>
 <p>打开监控页面后, 可以发现 在程序内仅有一个Driver</p>
 <p>因为我们是Local模式, Driver即管理 又 干活.</p>
 <p>同时, 输入jps<br>​</p>
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\9.jpg"></p>
+<p><img src="/2024/06/03/Spark2/9.jpg"></p>
 <p>可以看到local模式下的唯一进程存在</p>
 <p>这个进程 即是master也是worker</p>
 <h3 id="bin-spark-shell-了解"><a href="#bin-spark-shell-了解" class="headerlink" title="bin&#x2F;spark-shell - 了解"></a>bin&#x2F;spark-shell - 了解</h3><p>同样是一个解释器环境, 和<code>bin/pyspark</code>不同的是, 这个解释器环境 运行的不是python代码, 而是scala程序代码</p>
@@ -245,7 +245,7 @@
 <p>配置log4j.properties 文件 [可选配置]</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1. 改名</span></span><br><span class="line">mv log4j.properties.template log4j.properties</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2. 修改内容 参考下图</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\10.jpg"></p>
+<p><img src="/2024/06/03/Spark2/10.jpg"></p>
 <blockquote>
 <p>这个文件的修改不是必须的,  为什么修改为WARN. 因为Spark是个话痨</p>
 <p>会疯狂输出日志, 设置级别为WARN 只输出警告和错误日志, 不要输出一堆废话.</p>
@@ -268,11 +268,11 @@
 <p>如果端口被占用, 会顺延到8081 …;8082… 8083… 直到申请到端口为止</p>
 <p>可以在日志中查看, 具体顺延到哪个端口上:</p>
 <p><code>Service &#39;MasterUI&#39; could not bind on port 8080. Attempting port 8081.</code><br>​</p>
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\11.jpg"></p>
+<p><img src="/2024/06/03/Spark2/11.jpg"></p>
 <h3 id="连接到StandAlone集群"><a href="#连接到StandAlone集群" class="headerlink" title="连接到StandAlone集群"></a>连接到StandAlone集群</h3><h4 id="bin-pyspark-1"><a href="#bin-pyspark-1" class="headerlink" title="bin&#x2F;pyspark"></a>bin&#x2F;pyspark</h4><p>执行:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bin/pyspark --master spark://node1:7077</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">通过--master选项来连接到 StandAlone集群</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如果不写--master选项, 默认是<span class="built_in">local</span>模式运行</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sc.parallelize([1,2,3,4,5]).map(lambda x: x + 1).collect()</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\花少女\blog\source_posts\Spark2\12.jpg"></p>
+<p><img src="/2024/06/03/Spark2/12.jpg"></p>
 <h4 id="bin-spark-shell"><a href="#bin-spark-shell" class="headerlink" title="bin&#x2F;spark-shell"></a>bin&#x2F;spark-shell</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bin/spark-shell --master spark://node1:7077</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">同样适用--master来连接到集群使用</span></span><br></pre></td></tr></table></figure>
 
 
@@ -284,7 +284,7 @@
 
 <h3 id="查看历史服务器WEB-UI"><a href="#查看历史服务器WEB-UI" class="headerlink" title="查看历史服务器WEB UI"></a>查看历史服务器WEB UI</h3><p>历史服务器的默认端口是: 18080</p>
 <p>我们启动在node1上, 可以在浏览器打开:</p>
-<p><code>node1:18080</code>来进入到历史服务器的WEB UI上.<br><img src="C:\Users\花少女\blog\source_posts\Spark2\13.jpg"></p>
+<p><code>node1:18080</code>来进入到历史服务器的WEB UI上.<br><img src="/2024/06/03/Spark2/13.jpg"></p>
 <p>zookeeper</p>
 
       
